@@ -1,6 +1,6 @@
 import { Formik } from "formik";
 import { motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { useBookTimeSlotMutation, useGetTimeSlotQuery } from "../redux/services/timeSlot";
@@ -10,7 +10,7 @@ export const Booking = () => {
 
   const navigate = useNavigate();
 
-  const { data, isLoading, isSuccess, error } = useGetTimeSlotQuery(timeSlot);
+  const { data, isLoading, isSuccess } = useGetTimeSlotQuery(timeSlot);
   const [bookTimeSlot] = useBookTimeSlotMutation();
 
   const timingVariants = {

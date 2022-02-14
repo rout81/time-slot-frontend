@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { useGetTimeSlotsQuery } from "../redux/services/timeSlot";
 import { setCurrentTime } from "../redux/timeSlice";
 
